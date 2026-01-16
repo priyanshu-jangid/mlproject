@@ -9,7 +9,6 @@ from sklearn.model_selection import train_test_split
 from dataclasses import dataclass
 
 from src.components.data_transformation import DataTransformation, DataTransformationConfig
-from src.components.model_trainer import ModelTrainer, ModelTrainerConfig
 
 # Initialize Data Ingestion Configuration
 @dataclass
@@ -52,7 +51,3 @@ class DataIngestion:
             logging.info('Exception occured at Data Ingestion stage')
             raise CustomException(e, sys)
     
-# Run Data ingestion
-if __name__ == "__main__":
-    obj = DataIngestion()
-    obj.initate_data_ingestion()
