@@ -119,3 +119,10 @@ class DataTransformation:
         except Exception as e:
             logging.info('Exception occured in initiate_data_transformation function')
             raise CustomException(e,sys)
+
+if __name__ == "__main__":
+    obj = DataTransformation()
+    obj.initate_data_transformation(
+        train_path="artifacts/train.csv",
+        test_path="artifacts/test.csv"
+    )
